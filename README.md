@@ -1,80 +1,108 @@
-# Week 4 — JavaScript Logic Challenges
+# JavaScript Logic Challenges
 
-## Overview
+## Project Overview
 
-This project contains my solutions to the Week 4 JavaScript Logic Challenges. The challenges helped me practise functions, conditions, loops, strings, mathematical operations, and problem-solving.
+This project contains JavaScript logic challenges completed to practise problem-solving, loops, conditions, strings, number operations, validation, and algorithms.
+
+## Challenges Completed
+
+- [x] Challenge 1: Check leap year
+- [x] Challenge 2: Calculate BMI category
+- [x] Challenge 3: Calculate motorcycle taxi fare
+- [x] Challenge 4: Convert seconds into hours, minutes, and seconds
+- [x] Challenge 5: Find the minimum number of currency pieces
+- [x] Challenge 6: Reverse a string
+- [x] Challenge 7: Count a character
+- [x] Challenge 8: Check for a palindrome
+- [x] Challenge 9: Capitalize every word
+- [x] Challenge 10: Validate and mask a phone number
+- [x] Challenge 11: Find the longest word
+- [x] Challenge 12: Compress repeated characters
+- [x] Challenge 13: Sum numbers from 1 to n
+- [x] Challenge 14: Check whether a number is prime
+- [x] Challenge 15: Print a pyramid
+- [x] Challenge 16: Generate Fibonacci numbers
+- [x] Challenge 17: Simulate guessing with binary search
+- [x] Challenge 18: Validate a password
+- [x] Challenge 19: Convert numbers to Roman numerals
+- [x] Challenge 20: Validate a national ID using simplified rules
+
+**Total: 20 challenges completed.**
 
 ## Project Structure
 
-- round1.js — Numbers and Conditions (Challenges 1–5)
-- `round2.js` — Strings (Challenges 6–12)
-- `round3.js` — Loops and Patterns (Challenges 13–17)
-- `boss.js` — Boss Round (Challenges 18–20)
+- `round1.js` — Challenges 1–5
+- `round2.js` — Challenges 6–12
+- `round3.js` — Challenges 13–17
+- `boss.js` — Challenges 18–20
 - `README.md` — Project documentation
 
-## Challenges
+## How to Run the Code
 
-### Round 1: Numbers and Conditions
+Make sure Node.js is installed. Open a terminal in the project folder and run:
 
-- [ ] Challenge 1: isLeapYear(year)
-- [ ] Challenge 2: getBMICategory(weightKg, heightM)
-- [ ] Challenge 3: motoFare(km)
-- [ ] Challenge 4: convertSeconds(total)
-- [ ] Challenge 5: changeMaker(amount)
+```bash
+node round1.js
+node round2.js
+node round3.js
+node boss.js
+```
 
-### Round 2: Strings
+Each command runs the challenges in that file and displays their test results in the terminal.
 
-- [ ] Challenge 6: reverseString(str)
-- [ ] Challenge 7: countChar(str, char)
-- [ ] Challenge 8: isPalindrome(str)
-- [ ] Challenge 9: titleCase(str)
-- [ ] Challenge 10: maskPhone(phone)
-- [ ] Challenge 11: longestWord(sentence)
-- [ ] Challenge 12: compress(str)
+## Problem-Solving Approach
 
-### Round 3: Loops and Patterns
+For each challenge, I used the following approach:
 
-- [ ] Challenge 13: sumTo(n)
-- [ ] Challenge 14: isPrime(n)
-- [ ] Challenge 15: printPyramid(rows)
-- [ ] Challenge 16: fibonacci(n)
-- [ ] Challenge 17: guessingGameSimulator(secret)
-
-### Boss Round
-
-- [ ] Challenge 18: validatePassword(pw)
-- [ ] Challenge 19: romanNumeral(n)
-- [ ] Challenge 20: nationalIdCheck(id)
-
-
+1. **Understand:** Identify what the problem asks me to solve.
+2. **Examples:** Consider sample inputs, expected outputs, and edge cases.
+3. **Plan:** Write simple steps before implementing the solution.
+4. **Code:** Translate the plan into JavaScript.
+5. **Test:** Run the function with different inputs and check the results.
 
 ## Testing
 
-I ran my JavaScript files using Node.js in the VS Code terminal.
+I used `console.log()` to test the functions with normal inputs and edge cases, including empty strings, zero values, invalid inputs, and boundary values where appropriate.
 
-Commands used:
+I ran the JavaScript files with Node.js and corrected mistakes when the output did not match the expected result.
 
-- node round1.js
-- node round2.js
-- node round3.js
-- node boss.js
+## Comparing Solutions
 
-## Debugging Reflection
+### Challenge 13: `sumTo()` vs `sumToFormula()`
 
-**Bug:** My sumTo() function returned 10 instead of 15 when I tested sumTo(5).
+Both functions calculate the sum of whole numbers from 1 through n.
 
-**How I found it:** I compared the actual output with the expected answer and checked the loop condition.
+- **Loop solution (`sumTo`):** Adds each number one at a time. It is easy for a beginner to follow because the steps are explicit.
+- **Formula solution (`sumToFormula`):** Uses the formula `n * (n + 1) / 2`. It is shorter and takes constant time for valid numeric inputs.
 
-**Fix:** I changed i < n to i <= n so that the loop includes the final number.
+Both solutions return the same result for the tested inputs. The formula is more efficient for large inputs, while the loop makes the addition process easier to see.
 
-**Lesson learned:** I learned that a small mistake in a loop condition can change the result. Testing with sample inputs helps me find and fix logic errors.
+### Challenge 6: `reverseString()` vs a loop-based alternative
+
+A string can be reversed by visiting its characters from the end to the beginning and building a new string. This approach is straightforward because the loop clearly shows the order in which characters are added.
+
+Using a built-in method can make the code shorter, but the loop helps demonstrate how string traversal works.
+
+## Debugging Experience
+
+While testing `sumTo()`, I changed the loop condition from `i <= n` to `i < n` by mistake.
+
+When I tested `sumTo(5)`, it returned `10` instead of the expected `15` because the loop stopped before adding 5.
+
+I fixed the condition by changing it back to `i <= n`. After running the test again, `sumTo(5)` returned `15`, which was correct.
+
+This taught me that a small change in a loop condition can cause an incorrect result. Testing with a known example helped me identify and fix the bug.
+
 ## What I Learned
 
 Through these challenges, I practised:
 
-- Writing and calling JavaScript functions.
-- Using if , else, and comparison operators.
-- Working with strings and string methods.
-- Using loops to solve problems.
-- Applying mathematical formulas.
-- Testing code and debugging errors.
+- Using variables, conditions, and loops.
+- Working with strings and arrays.
+- Writing and calling functions.
+- Handling invalid inputs and edge cases.
+- Breaking problems into smaller steps.
+- Testing, debugging, and comparing solutions.
+- Using Git and GitHub to track and submit my work.
+
+
